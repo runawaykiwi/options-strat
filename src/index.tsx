@@ -4,12 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { ConfigProvider } from 'antd';
+import defaultLocale from 'antd/locale/en_US';
+
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <ConfigProvider locale={defaultLocale}>
     <App />
+    </ConfigProvider>
   </React.StrictMode>
 );
 
